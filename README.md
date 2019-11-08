@@ -12,7 +12,7 @@ bountyblok.io engine will call an action `execchlgdone` on the chain when a chal
 
 - account_name (the account who completed the challenge)
 - challenge_name (the name of the completed challenge)
-- challenge_guid (the identifer of the challenge)
+- challenge_guid (the identifier of the challenge)
 - reward (the asset associated to the challenge. Example "25.0000 KARMA"
 - completion_date (the timestamp of when the challenge was completed)
 
