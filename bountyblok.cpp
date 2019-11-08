@@ -10,6 +10,8 @@ class [[eosio::contract("bountyblok")]] bountyblok : public contract {
 	// notifying actions
 	[[eosio::action]]
 	void execchlgdone(name receiver, name account_name, std::string challenge_name, std::string challenge_guid, uint64_t create_date, asset reward) {
+		
+		// notify receiver using require_recipient via inline action
 		notify_challenge_done_action notichlgdone(get_self(), {get_self(), "active"_n});
 		notichlgdone.send(receiver, account_name, challenge_name, challenge_guid, create_date, reward);
 	}
