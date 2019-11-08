@@ -1,4 +1,4 @@
-**Bountyblok EOSIO smart contract**
+**Bountyblok EOSIO smart contract notification**
 
 bountyblok.io is a gamification engine powered by the EOS blockchain.
 
