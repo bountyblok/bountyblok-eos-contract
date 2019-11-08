@@ -18,7 +18,7 @@ bountyblok.io engine will call an action `execchlgdone` on the chain when a chal
 
 ## Notification
 
-In addition, `execchlgdone` will notify the `receiver` external contract that implements `on_notify` with a carbon copy challenge parameters as shown in [bountyblok.cpp](https://github.com/bountyblok/bountyblok-eos-contract/blob/master/bountyblok.cpp#L18).
+In addition, `execchlgdone` will notify the `receiver` external contract that implements `on_notify` with a carbon copy challenge parameters as shown in [bountyblok.cpp::execchlgdone](https://github.com/bountyblok/bountyblok-eos-contract/blob/master/bountyblok.cpp#L18).
 
 [bbreceiver.cpp](https://github.com/bountyblok/bountyblok-eos-contract/blob/master/bbreceiver.cpp) is an example of an external contract on how to define and implement the `on_notify`.
 
