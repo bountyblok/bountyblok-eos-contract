@@ -4,7 +4,7 @@ bountyblok.io is a gamification engine powered by the EOS blockchain.
 
 Thanks for your support! 
 
-# Installation
+# How It Works
 
 bountyblok.io engine will call an action `execchlgdone` on the chain when a challenge has been completed.
 
