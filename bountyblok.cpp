@@ -7,6 +7,7 @@ class [[eosio::contract("bountyblok")]] bountyblok : public contract {
   public:
   	using contract::contract;
 
+	// notifying actions
 	[[eosio::action]]
 	void execchlgdone(name receiver, name account_name, std::string challenge_name, std::string challenge_guid, uint64_t create_date, asset reward) {
 		notify_challenge_done_action notichlgdone(get_self(), {get_self(), "active"_n});
@@ -19,6 +20,7 @@ class [[eosio::contract("bountyblok")]] bountyblok : public contract {
 		require_recipient(receiver);
 	}
 	
+	// empty log actions
 	[[eosio::action]]
 	void logtask(std::string task_guid, std::string task_data, std::string account_name, std::string create_date) {}
 
@@ -31,6 +33,7 @@ class [[eosio::contract("bountyblok")]] bountyblok : public contract {
 	[[eosio::action]]
 	void addsocial(std::string from, std::string to, std::string social_data, std::string create_date) {}
 	
+	// action wrappers
 	using notify_challenge_done_action = action_wrapper<"notichlgdone"_n, &bountyblok::notichlgdone>;
 };
 
