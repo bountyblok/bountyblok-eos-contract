@@ -1,4 +1,4 @@
-**Bountyblok EOSIO smart contract is powered by the bountyblok.io engine **
+**Bountyblok EOSIO smart contract is powered by the bountyblok.io engine**
 
 The [bountyblok engine](bountyblok.io) will execute on chain the results of a completed challenge.
 
