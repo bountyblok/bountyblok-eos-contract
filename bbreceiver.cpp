@@ -15,9 +15,7 @@ class [[eosio::contract("bbreceiver")]] bbreceiver : public contract {
 	 */
 	[[eosio::on_notify("bountyblok::notichlgdone")]]
 	void onnotified(name receiver, name account_name, std::string challenge_name, std::string challenge_guid, uint64_t create_date, asset reward) {
-		
 		// handle received notification for completing a challenge
-
 	}
 
 	[[eosio::action]]
