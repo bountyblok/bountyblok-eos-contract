@@ -14,7 +14,7 @@ class [[eosio::contract("bbreceiver")]] bbreceiver : public contract {
 	 *  Ex: Simply store it in a Datatable to process later.
 	 */
 	[[eosio::on_notify("bountyblok::notichlgdone")]]
-	void onnotified(name receiver, name account_name, std::string challenge_name, std::string challenge_guid, uint64_t create_date, asset reward) {
+	void onnotified(name receiver, name account_name, std::string challenge_name, std::string challenge_guid, uint64_t completion_date, asset reward) {
 		// handle received notification for completing a challenge
 	}
 
