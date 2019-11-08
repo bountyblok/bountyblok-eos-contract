@@ -1,0 +1,1 @@
+# bountyblok-eos-contract
