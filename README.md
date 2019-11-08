@@ -1,10 +1,40 @@
-**Bountyblok EOSIO smart contract is powered by the bountyblok.io engine**
+**Bountyblok EOSIO smart contract**
 
-The [bountyblok engine](bountyblok.io) will execute on chain the results of a completed challenge.
+bountyblok.io is a gamification engine powered by the EOS blockchain.
 
-The account_name, the reward (if any), the challenge name, etc.
+Thanks for your support! 
 
-In addition, this will notify the external contract that implements the `on_notify` with the results of the challenge.
+# Installation
+
+bountyblok.io engine will call an action `execchlgdone` on the chain when a challenge has been completed.
+
+## Challenge Params
+
+- account_name (the account who completed the challenge)
+- challenge_name (the name of the completed challenge)
+- challenge_guid (the identifer of the challenge)
+- reward (the asset associated to the challenge. Example "25.0000 KARMA"
+- completion_date (the timestamp of when the challenge was completed)
+
+## Notification
+
+In addition, `execchlgdone` will notify the `receiver` external contract that implements `on_notify` with a carbon copy challenge parameters.
 
 [bbreceiver.cpp](https://github.com/bountyblok/bountyblok-eos-contract/blob/master/bbreceiver.cpp) is an example of an external contract on how to define and implement the `on_notify`.
+
+## Use Cases
+
+### karmaapp.io
+
+A daily challenge with 3 tasks:
+
+- Like 3 posts
+- Comment 2 posts
+- Create 1 post
+
+Reward: 25.0000 KARMA
+
+Everytime an account has completed the above challenge via contract actions executions on chain, bountyblok.io engine will try to notify that contract on chain with the necessary data. (to reward or simply store in a datatable for later).
+
+
 
