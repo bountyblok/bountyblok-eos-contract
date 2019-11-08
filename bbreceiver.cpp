@@ -5,7 +5,7 @@ using namespace eosio;
 
 class [[eosio::contract("bbreceiver")]] bbreceiver : public contract {
   public:
-  	 using contract::contract;
+  	using contract::contract;
 	 
 	/**
 	 *  Implementing the bountyblok::notichlgdone allows this smart contract
